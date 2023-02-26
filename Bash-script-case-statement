@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# A script that will ask for a number and print out a message depending on the value. 
+
+echo "What command do you want ran? Please enter a number."
+
+echo "1 - pwd"
+echo "2 - ls"
+echo "3 - lsblk"
+
+read action;
+
+case $action in
+    1) 
+        sleep 2
+        pwd;;
+    2) 
+        sleep 2
+        ls;;
+    3) 
+        sleep 2
+        lsblk;;
+    *) 
+        echo "The value you have entered is not valid."
+esac
+
+
+# read -p "Enter a number: " n
+# case $n in
+#     ???) 
+#         echo "This value has three characters";;
+#     [2-50]) 
+#         echo "This value is between 2 and 50";;
+#     0|1) 
+#         echo "This value is 0 or 1.";;
+#     *.txt) 
+#         echo "This value ends with .txt.";;
+#     *) 
+#         echo "Other";;
+# esac
+    
