@@ -1,0 +1,30 @@
+#!/bin/bash
+### The line above is the shebang. The shebang is used to tell the environment that we are in, 
+###the interpreter we are going to be using###
+
+#<-Using a pound sign is for making comments/or you could say making a line not active, the line with a '#'
+###as the very first chracter won't be read when the script is ran.
+
+###AUTHOR: Tyriq Martin
+###DESCRIPTION: This script will ask the user what their favorite food is, and print a message telling them what their favorite food is.
+###DATE: 2/27/2023
+
+###Below, line 14 is asking the user what their favorite food is. This is done by using the echo command
+
+echo "What is your favorite food?"
+
+###Below, line 20 is taking in the input from the user and storing it in a variable.
+###This is done using the read command, which allows users to enter an input, and their input can be stored into a variable. 
+###In this case the users input is being stored in the variable 'favFood'. 
+
+read favFood
+
+###Below, line 30 is printing a message including the value of the variable favFood that was
+###taken from the input of the user.
+###To include the variable, you have to use the dollar sign ($) right behind the variable, and the whole message has
+###to be in double quotes (""), as you see below. If you put the message in single quotes (''), it won't use the value of the variable.
+###So in this case, instead of it printing the value tooken from the user and stored in the variable, it will treat the variable
+###like it is a normal piece of text, just printing the $ with the variable name, instead of the value entered by the user.
+###Thats how it works when using the echo command.
+
+echo "Your favorite food is $favFood."
