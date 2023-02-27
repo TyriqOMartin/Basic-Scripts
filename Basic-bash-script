@@ -1,8 +1,8 @@
 #!/bin/bash
 
-###Author: Tyriq Martin
-###Description: This script will ask the user what their favorite food is, and print a message telling them what their favorite food is.
-###Date: 2/27/2023
+###AUTHOR: Tyriq Martin
+###DESCRIPTION: This script will ask the user what their favorite food is, and print a message telling them what their favorite food is.
+###DATE: 2/27/2023
 
 ###Below, line 8 is asking the user what their favorite food is using the echo command.
 echo "What is your favorite food?"
