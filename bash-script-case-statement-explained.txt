@@ -1,0 +1,71 @@
+#!/bin/bash
+
+###AUTHOR: Tyriq Martin
+###DESCRIPTION: This script will Take an input from the user, and will either run a command depending on the input they choose or tell the user their
+###input is not valid.
+###DATE: 2/27/2023
+
+###Below, line 10-14 is asking the user what command they want ran, and that they have to enter a number 1-3 to select one of the three commands
+###that can be ran. Entering anything else other than the numbers 1-3 will be an invalid entry, and will let the user know.
+echo "What command do you want ran? Please enter a number 1-3."
+
+echo "1 - pwd"
+echo "2 - ls"
+echo "3 - lsblk"
+
+###Below, line 28 is using the read command, so a user can enter their input. When the user enters their input, it will be stored inside of a
+###variable. In this case the variable is the word 'action'.
+
+###Below, line 30-42 is the case statement. In this case statement, it is taking the value acquired from the user that was stored in the
+###variable 'action' and will see if it matches any of the patterns in the case statement below. 
+###So for example if the user enters '1', the script will run the commands under '1'. In this case it will sleep
+###/delay program execution for 2 seconds, then print the users current working directory with the command pwd.
+###Another example is if the user enters '*' then the commands under '*' will run. In this case it will 
+###echo "The value you have entered is not valid."
+
+###Case statements are just like conditional/if statements in terms of opening and closing it. As you can see the case statement starts
+###with case and ends with case spelled backwards (esac), as you see below on lines 30 and 42.
+read action;
+
+case $action in
+    1) 
+        sleep 2
+        pwd;;
+    2) 
+        sleep 2
+        ls;;
+    3) 
+        sleep 2
+        lsblk;;
+    *) 
+        echo "The value you have entered is not valid."
+esac
+
+###AUTHOR: Tyriq Martin
+###DESCRIPTION: This script will ask the user to enter a value and depending on the value entered, there will be a certain output, this is done by using
+###the case statement.
+###DATE: 2/27/2023 
+
+###Below, line 58 the read command is being used with the option -p which allows you to provide a prompt, in this case it is asking the user to enter
+###a value. As you know the read command can store the users entry in a variable. In this case it is storing the value in a variable
+###named 'n'.
+###Below, line 59-70 is the case statement. Depending on the value entered and stored in the variable 'n' the case statement will
+###in this case echo a message back to the user saying what type of value they have entered.
+###For example if they enter a 3 character value the case statement will print the message "This value has three characters."
+###In terms of this case statement below, it is taking the variable 'n' and seeing if the value of 'n' matches any of the patterns
+###in the case statement. 
+
+# read -p "Enter a value: " n
+# case $n in
+#     ???) 
+#         echo "This value has three characters";;
+#     [2-50]) 
+#         echo "This value is between 2 and 50";;
+#     0|1) 
+#         echo "This value is 0 or 1.";;
+#     *.txt) 
+#         echo "This value ends with .txt.";;
+#     *) 
+#         echo "Other";;
+# esac
+    
