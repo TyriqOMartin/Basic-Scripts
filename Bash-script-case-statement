@@ -25,7 +25,7 @@ case $action in
 esac
 
 
-# read -p "Enter a number: " n
+# read -p "Enter a value: " n
 # case $n in
 #     ???) 
 #         echo "This value has three characters";;
