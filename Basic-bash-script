@@ -1,12 +1,14 @@
 #!/bin/bash
-### The line above is the shebang. The shebang is used to tell the environment that we are in, 
-###the interpreter we are going to be using###
 
-###The below line is asking the user what their favorite food is.
+###Author: Tyriq Martin
+###Description: This script will ask the user what their favorite food is, and print a message telling them what their favorite food is.
+###Date: 2/27/2023
+
+###Below, line 8 is asking the user what their favorite food is.
 echo "What is your favorite food?"
-###The below line is taking in the input from the user and storing it in a variable that you can use.
+
+#Below, line 11 is using the read command to take input from a user, and is storing the input inside a variable.
 read favFood
 
-###The below line is printing a message including the value of the variable favFood that was
-###taken from the input of the user.###
+#Below, line 14 is echoing a message using the variable favFood
 echo "Your favorite food is $favFood."
