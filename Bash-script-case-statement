@@ -1,15 +1,21 @@
 #!/bin/bash
 
-# A script that will ask for a number and print out a message depending on the value. 
+###Author: Tyriq Martin
+###Description: This script will ask for a number, and each number has different command associated with it. Depending on the number entered, a certain command
+###will run.
+###Date: 2/27/2023
 
+#Below, line 9-13 is echoing a message to the user.
 echo "What command do you want ran? Please enter a number."
 
 echo "1 - pwd"
 echo "2 - ls"
 echo "3 - lsblk"
 
+#Below, line 16 is allowing the user to enter a input. The input is being stored in a variable.
 read action;
 
+#Below line 19 is the case statement
 case $action in
     1) 
         sleep 2
@@ -24,7 +30,12 @@ case $action in
         echo "The value you have entered is not valid."
 esac
 
+###Author: Tyriq Martin
+###Description: This script will ask the user to enter a value and depending on the value entered, there will be a certained output, this is done by using
+###the case statement.
+###Date: 2/27/2023
 
+##Below, lines 39-51 use the read command to take input from the user, and the case statement to provide different outputs depending on the users entry.
 # read -p "Enter a value: " n
 # case $n in
 #     ???) 
