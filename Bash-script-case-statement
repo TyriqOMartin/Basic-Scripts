@@ -31,7 +31,7 @@ case $action in
 esac
 
 ###Author: Tyriq Martin
-###Description: This script will ask the user to enter a value and depending on the value entered, there will be a certained output, this is done by using
+###Description: This script will ask the user to enter a value and depending on the value entered, there will be a certain output, this is done by using
 ###the case statement.
 ###Date: 2/27/2023
 
