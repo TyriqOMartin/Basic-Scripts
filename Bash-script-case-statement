@@ -35,7 +35,7 @@ esac
 ###the case statement.
 ###DATE: 2/27/2023
 
-##Below, lines 39-51 use the read command to take input from the user, and the case statement to provide different outputs depending on the users entry.
+#Below, lines 39-51 use the read command to take input from the user, and the case statement to provide different outputs depending on the users entry.
 # read -p "Enter a value: " n
 # case $n in
 #     ???) 
