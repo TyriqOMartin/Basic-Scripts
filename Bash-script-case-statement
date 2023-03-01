@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###AUTHOR: Tyriq Martin
-###DESCRIPTION: This script will ask for a number, and each number has different command associated with it. Depending on the number entered, a certain command
+###DESCRIPTION: This script will ask for a number, and each number has a different command associated with it. Depending on the number entered, a certain command
 ###will run.
 ###DATE: 2/27/2023
 
