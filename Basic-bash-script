@@ -4,7 +4,7 @@
 ###DESCRIPTION: This script will ask the user what their favorite food is, and print a message telling them what their favorite food is.
 ###DATE: 2/27/2023
 
-###Below, line 8 is asking the user what their favorite food is using the echo command.
+#Below, line 8 is asking the user what their favorite food is using the echo command.
 echo "What is your favorite food?"
 
 #Below, line 11 is using the read command to take input from a user, and is storing the input inside a variable.
