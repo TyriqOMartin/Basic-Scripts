@@ -1,0 +1,29 @@
+#!/bin/bash
+
+###Author: Tyriq Martin
+###Description: This script includes a function that checks if a number is even or odd.
+###Date: 3/1/2023
+
+#Below, line 8-17 is the function 'check_even'. This function checks if a number is even or odd.
+check_even () {
+    local mod=2
+    echo "The value of mod is $mod"
+    if [ $(("$4" % $mod)) -eq 0 ]
+    then 
+       echo "The number $4 is even!";
+    else 
+       echo "The number $4 is odd!"
+    fi
+}
+
+#Below, line 20-23 includes variables that are used as parameters to test the function.
+number=2344
+two=25
+xavier=19
+mod=11
+
+#Below, line 26 is using the function 'check_even'.
+check_even $number $two $xavier $mod 11
+
+#Below, line 29 is printing a message with the variable 'mod' on line 23.
+echo "$mod riq"
