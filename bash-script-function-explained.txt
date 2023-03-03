@@ -1,0 +1,44 @@
+#!/bin/bash
+
+###Author: Tyriq Martin
+###Description: This script includes a function that checks if a number is even or odd.
+###Date: 3/1/2023
+
+#Below, line 21-30 is the function 'check_even'. This function checks if a number is even or odd. Inside this function the keyword 'local'
+#is used with the variable 'mod' on line 22. When you use the local keyword, this makes the value of this variable only exist inside of the function.
+#Below, line 24 is using the mod operator (%), and that outputs the remainder of division. For example, take 5/2 -> the most times 2 can go into
+#5 is 2 -> 2*2=4 -> 5-4=1 -> so the remainder is 1 -> SO 5%2=1. Another example: 2%2=0. So this function is checking if the remainder of this
+#'mod equation' is equal to zero. So depending what parameter (the variable 'mod' on line 37 in this case) you use with this function, it will print 
+#whether it is even or odd by doing the mod equation. The parameter will be getting modded by 2 because the equation
+#is '(parameter) % $mod', and the local variable 'mod' equals 2 in this function.
+#Below, line 24 includes a 'mod equation' of '$4 % $mod', and the $4 stands for the fourth parameter used in the function on line 40.
+#The fourth parameter is '$mod' on line 40. On line 24 if you put '$1' instead of '$4' it will use the first parameter listed when 
+#calling the function, which is the variable 'number or $number' on line 34, and you see on line 40 the variable 'number' is the 
+#first parameter for the function 'check_even'. It starts at $1 for the parameters that are used in a function. $0 is for the function
+#itself. So in this case: $1=the variable 'number', $2=the variable 'two', $3=the variable 'xavier', $4=the variable 'mod',
+#$5=11. You see all of this on line 40: '$number' is the first parameter so it is $1, 11 is the fifth parameter so it is $5.
+
+check_even () {
+    local mod=2
+    echo "The value of mod is $mod"
+    if [ $(("$4" % $mod)) -eq 0 ]
+    then 
+       echo "The number $4 is even!";
+    else 
+       echo "The number $4 is odd!"
+    fi
+}
+
+#Below, line 34-37 includes variables that are used as parameters to test the function. On, line 37 I used 'mod' as a variable outside
+#of the function to show that it can be used differently inside and outside the function. When you run this script you can see that.
+number=2344
+two=25
+xavier=19
+mod=11
+
+#Below, line 40 is using the function 'check_even'.
+check_even $number $two $xavier $mod 11
+
+#Below, line 44 is printing a message with the variable 'mod' that was created on line 37.
+#Below, line 44 I was showing that the 'mod' variable can be created inside and outside of the function, and not affect each other.
+echo "$mod riq"
